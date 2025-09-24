@@ -43,7 +43,7 @@ Hyperparameters like batch normalization, weight decay and dropout layers were a
 ## Training Procedure
 
 - **Data split:** The original 60,000 training samples were split into 50,000 for training and 10,000 for model tuning and validation.
-- **Batch size:** 64, chosen to balance computation time and gradient stability.
+- **Batch size:** 64, chosen to balance computation time and gradient stability. Tested 128 and greater number which gave lower test accuracy.
 - **Optimizer:** Adam optimizer with learning rate 0.001 was used after testing like 0.003 and 0.005 several settings for stable and fast convergence.
 - **Epochs:** The network was trained for up to 10 epochs, after experimenting for 30 epochs and observing overfitting after 10.
 - **Dropout:** The dropout value is 0.3, after using 0.2 nad 0.5 because it was the sweet spot, otherwise the model was hampering feature detection and reducing the accuracy below the one of the model without regularization 
